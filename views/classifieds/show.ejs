@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+    <div class="content-container">
+        <div class="show-container">
+            <div class="show-header">
+                <h2> Title: <%= classified.title %> </h2>
+                <h3> Created by: <img alt="avatar" src="<%= classified.userAvatar %>" referrerpolicy="no-referrer" class="avatar"> <%= classified.userName %> </h3>
+                <h3> Programming Language: <%= classified.language %> </h3>
+                <h3> Summary: <%= classified.contentSum %></h3>
+            </div>
+
+            <div class="show-content">
+                <%= classified.content %>
+            </div>
+            <div class="submit-div-cheat">
+                <div class="filler"></div>
+                <div>
+                    <form action="/classifieds/<%= classified._id %>/edit" method="GET" class="edit-form">
+                        <button type="submit">EDIT</button>
+                    </form>
+                </div>
+                <div>
+                    <form action="/classifieds/<%= classified._id %>?_method=DELETE" method="POST" class="delete-form">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/footer') %>

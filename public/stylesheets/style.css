@@ -1,0 +1,211 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+
+
+body {
+  color: white;
+  background-color: black;
+}
+
+.header-title-container {
+  width: 80%;
+  margin: 10px auto 10px auto;
+}
+
+.header-nav {
+  position: relative;
+  margin: 10px auto 15px auto;
+  padding: 0;
+  width: 80%;
+  height: 40px;
+  background: linear-gradient(black , rgb(59, 59, 59));
+}
+
+.header-nav > a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  margin: 0;
+  padding: 9.5px;
+  font-size: 18px;
+}
+
+.header-nav > a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+.login {
+  float: right;
+}
+
+.glowing::before , .glowing::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  background: linear-gradient(45deg , red , orange , yellow , green , blue , indigo , violet);
+  background-size: 500%;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  z-index: -1;
+  animation: rotating 25s linear infinite;
+}
+
+@keyframes rotating {
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+  
+}
+
+.content-container {
+  margin: auto;
+  width: calc(80% + 6px);
+}
+
+.classified-list-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr .5fr 3fr .25fr;
+  border-bottom: solid white 2px;
+  padding: 5px 0 5px 0;
+  margin-top: 3px;
+}
+
+.classified-list-header-cell {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ad-nav-container {
+  margin: 5px auto 5px auto;
+  width: 80%;
+}
+
+.add-ad {
+  position: relative;
+  float: right;
+  padding: 5px;
+  background-color: black;
+}
+
+form {
+  width: 100%;
+  background-color: rgb(142, 142, 142, .5);
+  border-radius: 25px;
+  padding: 10px;
+}
+
+form *{
+  font-size: 18px;
+  color: black
+}
+
+form > label {
+  color: white;
+  padding: 5px;
+  margin: 10px 0px 10px 5%;
+}
+
+form > input[type=text] {
+  border-radius: 25px;
+  padding: 4px;
+  padding-left: 10px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+form > textarea {
+  width: 90%;
+  height: 400px;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 5%;
+  resize: none;
+}
+
+form > select {
+  width: 90%;
+  border-radius: 25px;
+  padding: 5px;
+  margin-left: 5%;
+}
+
+form > input[type=submit] {
+  border-radius: 25px;
+  padding: 4px;
+}
+
+form > button {
+  width: 100%;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.submit-form {
+  background-color: none;
+  width: 100%;
+}
+
+/* TODO FIND A BETTER SOLUTION */
+
+.submit-div-cheat {
+  margin: auto;
+  margin-top: 10px;
+  width: 90%;
+  display: grid;
+  padding: 5px;
+  grid-template-columns: 9fr 1fr 1fr;
+}
+
+form > input:valid,
+form > textarea:valid {
+  background-color: palegreen;
+}
+
+.show-container {
+  border-radius: 25px;
+  padding: 25px;
+  background-color: rgb(142, 142, 142, .5);
+}
+
+.avatar {
+  height: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 25px;
+}
+
+.show-header {
+  margin: 5px auto 5px auto;
+  width: 90%;
+}
+
+.show-content {
+  margin: auto;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255, .5);
+  width: 90%;
+  height: 400px;
+  color: black;
+}
+
+
+
+
+
+
+

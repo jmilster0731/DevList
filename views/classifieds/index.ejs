@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<div class="ad-nav-container">
+    <div class="add-ad"><a href="/classifieds/new">PLACE AN AD</a></div>
+</div>
+
+<div class="content-container">
+    <div class="classified-list-item">
+        <div class="classified-list-header-cell">Title</div>
+        <div class="classified-list-header-cell">Language</div>
+        <div class="classified-list-header-cell">Summary</div>
+        <div class="classified-list-header-cell"></div>
+    </div>
+
+    <% classifieds.forEach(function(c) { %>
+        <div class="classified-list-item">
+            <div class="classified-list-header-cell"><%= c.title %></div>
+            <div class="classified-list-header-cell"><%= c.language %></div>
+            <div class="classified-list-header-cell"><%= c.contentSum %></div>
+            <div class="classified-list-header-cell"><a href="/classifieds/<%= c._id %>">DETAILS</a></div>
+        </div>
+    <% }); %>
+</div>
+
+<%- include('../partials/footer') %>
