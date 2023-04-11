@@ -1,24 +1,26 @@
 <%- include('../partials/header') %>
 
 <div class="ad-nav-container">
-    <div class="add-ad"><a href="/classifieds/new">PLACE AN AD</a></div>
+    <div class="add-ad glowing"><a href="/classifieds/new">PLACE AN AD</a></div>
 </div>
 
 <div class="content-container">
     <div class="classified-list-item">
-        <div class="classified-list-header-cell">Title</div>
-        <div class="classified-list-header-cell">Language</div>
-        <div class="classified-list-header-cell">Summary</div>
-        <div class="classified-list-header-cell"></div>
+        <div class="list-header-cell">Title</div>
+        <div class="list-header-cell">Language</div>
+        <div class="list-header-cell">Summary</div>
+        <div class="list-header-cell"></div>
     </div>
-
+    <% let i = 1 %>
     <% classifieds.forEach(function(c) { %>
+        <% if (i === 8) { i = 1 } %>
         <div class="classified-list-item">
-            <div class="classified-list-header-cell"><%= c.title %></div>
-            <div class="classified-list-header-cell"><%= c.language %></div>
-            <div class="classified-list-header-cell"><%= c.contentSum %></div>
-            <div class="classified-list-header-cell"><a href="/classifieds/<%= c._id %>">DETAILS</a></div>
+            <div class="list-cell background-<%= i %>"><%= c.title %></div>
+            <div class="list-cell background-<%= i %>"><%= c.language %></div>
+            <div class="list-cell background-<%= i %>"><%= c.contentSum %></div>
+            <div class="list-cell background-<%= i %>"><a href="/classifieds/<%= c._id %>">DETAILS</a></div>
         </div>
+        <% i++ %>
     <% }); %>
 </div>
 

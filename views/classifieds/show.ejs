@@ -14,16 +14,16 @@
             <div class="submit-div-cheat">
                 <div class="filler"></div>
                 <div>
-                    <form action="/classifieds/<%= classified._id %>/edit" method="GET" class="edit-form">
+                    <form action="/classifieds/<%= classified._id %>/edit" method="GET" class="just-a-button">
                         <button type="submit">EDIT</button>
                     </form>
                 </div>
                 <div>
-                    <form action="/classifieds/<%= classified._id %>?_method=DELETE" method="POST" class="delete-form">
+                    <form action="/classifieds/<%= classified._id %>?_method=DELETE" method="POST" class="just-a-button">
                         <button type="submit">Delete</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>

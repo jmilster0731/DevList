@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
+
     <div class="content-container">
         <h2>The Inputs will turn green once you've placed enough information within our system!</h2><br>
-        <form action="/classifieds" method="POST">
+        <form action="/queries" method="POST">
             <label>Title:</label>
             <input type="text" name="title" minlength="5" maxlength="32" required>
             <label>Programming Language:</label>
@@ -27,14 +28,15 @@
                 <option value="Rust">Rust</option>
                 <option value="Perl">Perl</option>
             </select>
-            <label>Summary:</label>
-            <input type="text" name="contentSum" minlength="15" maxlength="100" required>
+            <label>Img (optional): include a source link for an image if you'd like</label>
+            <input type="text" name="contentImg">
             <label>Content:</label>
-            <textarea name="content" minlength="15" required></textarea><br>
+            <textarea name="content" minlength="20" required></textarea><br>
             <div class="submit-div-cheat">
                 <div class="filler"></div><div class="filler"></div>
                 <input type="submit">
             </div>
         </form>
     </div>
+
 <%- include('../partials/footer') %>

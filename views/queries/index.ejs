@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<div class="ad-nav-container">
+    <div class="add-ad glowing"><a href="/queries/new">Ask Your Peers</a></div>
+</div>
+
+<div class="content-container">
+    <div class="query-list-item">
+        <div class="list-header-cell">Language</div>
+        <div class="list-header-cell">Title</div>
+        <div class="list-header-cell"></div>
+    </div>
+
+    <% let i = 1 %>
+    <% queries.forEach(function(q) { %>
+        <% if (i === 8) { i = 1 } %>
+        <div class="query-list-item">
+            <div class="list-cell background-<%= i %>"><%= q.language %></div>
+            <div class="list-cell background-<%= i %>"><%= q.title %></div>
+            <div class="list-cell background-<%= i %>"><a href="/queries/<%= q._id %>">DETAILS</a></div>
+        </div>
+        <% i++ %>
+    <% }); %>
+</div>
+
+<%- include('../partials/footer') %>

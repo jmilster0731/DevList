@@ -1,0 +1,84 @@
+<%- include('../partials/header') %>
+    <div class="content-container">
+        <div class="show-container">
+            <div class="show-header">
+                <h2> Title: <%= query.title %>
+                </h2>
+                <h3> Query Author: <img alt="avatar" src="<%= query.userAvatar %>" referrerpolicy="no-referrer"
+                        class="avatar">
+                    <%= query.userName %>
+                </h3>
+                <h3> Programming Language: <%= query.language %>
+                </h3>
+            </div>
+
+            <div class="show-content">
+                <%= query.content %>
+            </div>
+            <div class="submit-div-cheat">
+                <div class="filler"></div>
+                <div>
+                    <form action="/queries/<%= query._id %>/edit" method="GET" class="just-a-button">
+                        <button type="submit">EDIT</button>
+                    </form>
+                </div>
+                <div>
+                    <form action="/queries/<%= query._id %>?_method=DELETE" method="POST" class="just-a-button">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="show-header">
+                <h2>Responses</h2>
+            </div>
+
+            <% query.responses.forEach(function(r) { %>
+                <div class="response-container">
+                    <div class="response-header">
+                        <div><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" class="avatar">
+                        </div>
+                        <div>
+                            <%= r.userName %>
+                        </div>
+                    </div>
+                    <div class="response-content">
+                        <% if (r.contentImg !==null) { %>
+                                <img src="<%= r.contentImg %>" class="response-img">
+                            <% } %>
+                                <div>
+                                    <%= r.content %>
+                                </div>
+                    </div>
+                    <div>
+                        <form action="/responses/<%= r._id %>?_method=DELETE" method="POST" class="just-a-button">
+                            <button type="submit">Delete?</button>
+                        </form>
+                    </div>
+                </div>
+                <% }) %>
+                <br>
+                    <div class="show-header">
+                        <h2>Add a Response?</h2>
+                    </div>
+
+                    <form action="/queries/<%= query._id %>/responses" method="POST" class="response-form">
+                        <br>
+                        <label>Img (optional): include a source link for an image if you'd like!</label>
+                        <input type="text" name="contentImg">
+                        <label>Content:</label>
+                        <textarea name="content" required></textarea>
+                        <div class="submit-div-cheat">
+                            <div class="filler"></div>
+                            <div class="filler"></div>
+                            <input type="submit">
+                        </div>
+                    </form>
+        </div>
+    </div>
+
+
+
+
+
+    <%- include('../partials/footer') %>

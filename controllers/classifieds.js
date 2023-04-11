@@ -37,7 +37,7 @@ async function create(req, res) {
         res.redirected(`/classifieds/${classified._id}`, { title: 'Classified', errorMsg: '' });
     } catch (err) {
         console.log(err);
-        res.render('classifieds/new', { title: 'Ad Detail', errorMsg: err.message });
+        res.render('classifieds/new', { title: 'Add a Classified', errorMsg: err.message });
     }
 }
 

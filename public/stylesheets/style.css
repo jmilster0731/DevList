@@ -79,15 +79,31 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr .5fr 3fr .25fr;
-  border-bottom: solid white 2px;
+  border-bottom: solid grey .5px;
   padding: 5px 0 5px 0;
   margin-top: 3px;
 }
 
-.classified-list-header-cell {
+.query-list-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  border-bottom: solid grey .5px;
+  padding: 5px 0 5px 0;
+  margin-top: 3px;
+}
+
+.list-header-cell {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+}
+
+.list-cell {
+  text-align: center;
+  font-size: 16px;
+  padding: 4px;
+  color: white;
 }
 
 .ad-nav-container {
@@ -202,6 +218,70 @@ form > textarea:valid {
   height: 400px;
   color: black;
 }
+
+.background-1 {
+  background-color: rgb(255, 0, 0, .2);
+}
+
+.background-2 {
+  background-color: rgb(255, 165, 0, .2);
+}
+
+.background-3 {
+  background-color: rgb(255, 255, 0, .2);
+}
+
+.background-4 {
+  background-color: rgb(0, 255, 0, .2);
+}
+
+.background-5 {
+  background-color: rgb(0, 0, 255, .2);
+}
+
+.background-6 {
+  background-color: rgb(75, 0, 130, .2);
+}
+
+.background-7 {
+  background-color: rgb(143, 0, 255, .2);
+}
+
+.response-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  margin: 5px auto 0 auto;
+  background-color: rgb(148, 148, 148, .5);
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.response-header {
+  width: 100%;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.response-content {
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 25px;
+  border: solid black 1px;
+}
+
+.just-a-button {
+  margin-top: 10px;
+  padding: 0;
+  width: 80%;
+  margin: auto;
+}
+
+.response-form {
+  width: 80%;
+  margin: auto;
+}
+
 
 
 
