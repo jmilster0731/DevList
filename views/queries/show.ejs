@@ -13,6 +13,9 @@
             </div>
 
             <div class="show-content">
+                <% if (query.contentImg !== null) { %>
+                    <img src="<%= query.contentImg %>" class="response-img">
+                <% } %>
                 <%= query.content %>
             </div>
             <div class="submit-div-cheat">

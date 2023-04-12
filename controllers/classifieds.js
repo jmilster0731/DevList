@@ -52,17 +52,14 @@ async function edit(req, res) {
 }
 
 async function update(req, res) {
-    console.log('anyone there?!?')
     try {
         const classified = await Classified.findByIdAndUpdate(
-          { _id: req.params.id },
-          {$set:req.body},
-          {
-            new: true,
-          }
+            { _id: req.params.id },
+            { $set: req.body },
+            { new: true }
         );
         res.redirect(`/classifieds/${classified._id}`);
-      } catch (error) {
+    } catch (error) {
         console.log(error);
-      }
+    }
 }

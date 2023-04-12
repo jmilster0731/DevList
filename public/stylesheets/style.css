@@ -215,8 +215,9 @@ form > textarea:valid {
   border-radius: 25px;
   background-color: rgb(255, 255, 255, .5);
   width: 90%;
-  height: 400px;
+  min-height: 400px;
   color: black;
+  white-space: pre-wrap;
 }
 
 .background-1 {
@@ -280,6 +281,10 @@ form > textarea:valid {
 .response-form {
   width: 80%;
   margin: auto;
+}
+
+.response-img {
+  max-height: 400px;
 }
 
 
