@@ -14,21 +14,25 @@
 
             <div class="show-content">
                 <% if (query.contentImg !== null) { %>
-                    <img src="<%= query.contentImg %>" class="response-img">
-                <% } %>
+                        <img src="<%= query.contentImg %>" class="response-img">
+                <% }; %>
                 <%= query.content %>
             </div>
             <div class="submit-div-cheat">
                 <div class="filler"></div>
                 <div>
+                    <% if (user?._id.equals(query.user)) { %>
                     <form action="/queries/<%= query._id %>/edit" method="GET" class="just-a-button">
                         <button type="submit">EDIT</button>
                     </form>
+                    <% } %>
                 </div>
                 <div>
+                    <% if (user?._id.equals(query.user)) { %>
                     <form action="/queries/<%= query._id %>?_method=DELETE" method="POST" class="just-a-button">
                         <button type="submit">Delete</button>
                     </form>
+                    <% } %>
                 </div>
             </div>
 
@@ -54,9 +58,11 @@
                                 </div>
                     </div>
                     <div>
+                        <% if (user?._id.equals(r.user)) { %>
                         <form action="/responses/<%= r._id %>?_method=DELETE" method="POST" class="just-a-button">
                             <button type="submit">Delete?</button>
                         </form>
+                        <% } %>
                     </div>
                 </div>
                 <% }) %>

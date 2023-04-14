@@ -14,14 +14,18 @@
             <div class="submit-div-cheat">
                 <div class="filler"></div>
                 <div>
+                    <% if (user?._id.equals(classified.user)) { %>
                     <form action="/classifieds/<%= classified._id %>/edit" method="GET" class="just-a-button">
                         <button type="submit">EDIT</button>
                     </form>
+                    <% } %>
                 </div>
                 <div>
+                    <% if (user?._id.equals(classified.user)) { %>
                     <form action="/classifieds/<%= classified._id %>?_method=DELETE" method="POST" class="just-a-button">
                         <button type="submit">Delete</button>
                     </form>
+                    <% } %>
                 </div>
             </div>
         </div>
