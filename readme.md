@@ -20,7 +20,7 @@ Editing made easy
 - OAuth
 
 ## Take a look at the current Product!
-Take a look! : 
+Take a look! : https://devlistjmilster.herokuapp.com/
 
 ## Next Steps / Icebox Items
 - Clean up the CSS components to make them mobile friendly!
