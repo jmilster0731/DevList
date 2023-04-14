@@ -287,7 +287,27 @@ form > textarea:valid {
   max-height: 400px;
 }
 
+.flex-container-index {
+  display: flex;
+  width: 60%;
+  height: 400px;
+  margin: auto;
+  justify-content: center;
+}
 
+.flex-item-index {
+  height: 100%;
+  width: 45%;
+  margin: auto;
+  border: solid 2px white;
+  padding: 10px;
+}
+
+.header-img {
+  height: 40px;
+  float: left;
+  margin-right: 10px;
+}
 
 
 

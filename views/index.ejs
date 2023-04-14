@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <%- include('./partials/header') %>
 
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<%- include('./partials/header') %>
+  <div class="content-container">
+    <div class="show-container">
+      <h2>Welcome to DevList, a Craigslist/StackOverflow Clone</h2>
+      <br>
+      <div class="flex-container-index">
+        <div class="flex-item-index"><h3>Classifieds: </h3><br>
+          Classifieds contain any advertisement you or other users would like to put out to developers for jobs or projects.
+        </div>
+        <div class="flex-item-index"><h3>Queries: </h3><br>
+          Queries are any question you'd like to ask your fellow developers when you're stuck on a particular piece of code.
+        </div>
+      </div>
+    </div>
+  </div>
 
-
+  <%- include('./partials/footer') %>
